@@ -1,0 +1,57 @@
+/* me */
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+#me{
+    width: 100%;
+    background-image: url("assets/images/me_background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#me > .top{
+    background-color: #1b1f2b;
+    opacity: 0.8;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#me > .top > .box-name{
+    color: whitesmoke;
+    border: solid white 1px;
+    padding: 20px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#name{
+    font-weight: bold;
+    font-size: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#me > .about{
+    background-color:#8b00bd;
+    color: white;
+}
+#me > .about > *{
+    padding: 10px;
+    width: 100%;
+}
+#me > .about > .about-text{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding-top: 40px;
+}
+#me > .about > .about-name{
+    font-size: 30;
+    font-weight: bold;
+}
+#others{
+    background-color: white;
+}
