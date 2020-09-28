@@ -2,10 +2,11 @@ var mainData = {
     me:{
         firstName: "Robert",
         lastname: "Wood",
+        title: "Bucheron",
         adress: "Rue du bois 24, 1450 Ste-Croix",
         phone: "079 970 07 70",
         mail: "robert.fistiniere@mail.ch",
-        birthDate: "01.01.1990",
+        birthDate: "01-01-1990",
         status: "Célibataire",
         nationality: "Suisse",
         goals: "Je souhaite couper un baobab",
