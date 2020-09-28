@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', boot)
+document.addEventListener('DOMContentLoaded', boot);
 function boot(){
     console.log(mainData);
+    buildWithData();
 }
