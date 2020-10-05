@@ -34,28 +34,24 @@
             </div>
         </div>
     </div>
-    <div id="jobs">
+    <div id="jobs" data-value="main.jobs">
         <div class="job">
-            <div class="job-name">training1</div>
-            <div class="job-location">forêt</div>
-            <div class="job-startdate">01-02-2001</div>
-            <div class="job-enddate">aujourd'hui</div>
-            <div class="job-description">Cuting tree</div>
-            <div class="job-tasks">
-                <div class="job-task">Task 1</div>
-                <div class="job-task">Task 2</div>
-                <div class="job-task">Task 3</div>
+            <div class="job-name" data-value="sub.name">...</div>
+            <div class="job-location" data-value="sub.location">...</div>
+            <div class="job-startdate" data-value="sub.startDate" data-transformer="prettyDate">...</div>
+            <div class="job-enddate" data-value="sub.endDate" data-transformer="prettyDate">...</div>
+            <div class="job-description" data-value="sub.description">...</div>
+            <div class="job-tasks" data-value="sub.tasks">
+                <div class="job-task" data-value="sub">...</div>
             </div>
-            <div class="job-skills">
-                <div class="job-skill">Skill 1</div>
-                <div class="job-skill">Skill 2</div>
-                <div class="job-skill">Skill 3</div>
+            <div class="job-skills" data-value="sub.skillsDeveloped">
+                <div class="job-skill" data-value="sub">...</div>
             </div>
         </div>
     </div>
-    <div id="skills">
+    <div id="skills" data-value="main.skills">
         <div class="skill">
-            <div class="skill-name">skill 1</div>
+            <div class="skill-name" data-value="sub.name">...</div>
             <div class="skill-levelOf10">6</div>
             <div class="skill-proofs">
                 <div class="skill-proof">proof 1</div>

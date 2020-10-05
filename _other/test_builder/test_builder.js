@@ -1,9 +1,6 @@
-"use strict"
-function buildWithData(){
-    patchWithData(document.documentElement)
-}
 function patchWithData(element, data=null){
     if(!element.dataset.value){
+        console.info("pass to children");
         [...element.children].forEach(child => patchWithData(child, data));
         return;
     }
@@ -48,12 +45,14 @@ function patchWithData(element, data=null){
 
     //array
     if(Array.isArray(dataValue)){
+        console.info("am array")
         var childrenToClone = [...element.children];
         childrenToClone.forEach(child=>child.remove())
         dataValue.forEach(datum=>{
             childrenToClone.forEach(childToClone=>{
                 let clonedChild = childToClone.cloneNode(true);
                 element.appendChild(clonedChild);
+                console.info("clonedChild", clonedChild)
                 patchWithData(clonedChild, datum);
             });
         });
@@ -62,16 +61,5 @@ function patchWithData(element, data=null){
     // normal
     element.innerText = dataValue;    
 }
-var transformers = {
-    stampToLocalTimeElapsed(stamp){
 
-    },
-    yearsElapsedSinceDate(dateStamp){
-        return Math.floor((Date.now() - dateStamp) / (3600*24*365*1000))
-    },
-    prettyDate(dateStamp){
-        var date = new Date(dateStamp);
-        return `${date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}`
-        // return `${date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long'})}`
-    }
-}
+patchWithData(document.body);
