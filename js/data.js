@@ -1,17 +1,17 @@
 var mainData = {
     me:{
         firstName: "Robert",
-        lastname: "Wood",
-        birthDate: "01-01-1990",
+        lastName: "Wood",
+        birthDate: new Date("1990-01-01").getTime(),
         title: "Bucheron",
         contact:[
             {adress: "Rue du chêne 24, 1450 Ste-Bois"},
             {phone: "079 970 07 70"},
             {mail: "robert.fistiniere@mail.ch"}
         ],
-        about: "",
+        about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum illum debitis accusamus repellat consequuntur sit nostrum ex laudantium eum beatae. Veritatis maiores in fugiat temporibus laudantium ut unde distinctio soluta.",
         others:[
-            "j'aime couper du bois",
+            "J'aime couper du bois",
             "J'ai le permis camion",
         ]
     },
