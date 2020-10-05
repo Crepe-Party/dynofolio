@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 :root{
-    --bg-color: #8b00bd;
+    --bg-color: darkviolet;
 }
 /* me */
 body{
@@ -92,7 +92,6 @@ body{
     border: solid 5px var(--bg-color);
     border-radius: 100%;
     left: -12px;
-    bottom: 0;
 }
 .job-startdate, .job-startdate-point{
     bottom: 0;
@@ -100,6 +99,14 @@ body{
 .job-enddate, .job-enddate-point{
     top: 0;
 }
+.job-description, .job-tasks, .job-skills{
+    padding-bottom: 20px;
+}
+.job-description-title, .job-task-title, .job-skill-title{
+    font-size: 25px;
+    padding-bottom: 5px;
+}
+
 /* skills */
 #skills{
 
