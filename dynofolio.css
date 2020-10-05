@@ -35,21 +35,24 @@ body{
     display: flex;
     justify-content: center;
 }
-#me > .about{
+.about{
     background-color:#8b00bd;
     color: white;
 }
-#me > .about > *{
+.about > *{
     padding: 10px 40px;
     width: 100%;
 }
-#me > .about > .about-text{
+.about-text{
     display: flex;
     justify-content: center;
     font-size: 30px;
     padding-top: 40px;
 }
-#me > .about > .about-name{
+.about-name{
     font-size: 30;
     font-weight: bold;
 }
+/* jobs */
+/* skills */
+/* projects */
