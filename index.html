@@ -11,17 +11,26 @@
     <div id="me">
         <div class="top">
             <div class="box-name">
-                <div id="name">Robert Wood</div>
-                <div id="title">Bucheron</div>
+                <div id="name">
+                    <span data-value="main.me.firstName">...</span>
+                    &nbsp
+                    <span data-value="main.me.lastName">...</span>
+                </div>
+                <div id="title" data-value="main.me.title">...</div>
             </div>
         </div>
         <div class="about">
             <div class="about-text">À propos</div>
-            <div class="about-name">Robert Wood, 30 ans</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum illum debitis accusamus repellat consequuntur sit nostrum ex laudantium eum beatae. Veritatis maiores in fugiat temporibus laudantium ut unde distinctio soluta.</div>
-            <div class="about-others">Autres :
-                <div class="about-other">- J'aime couper du bois</div>
-                <div class="about-other">- J'ai le permis camion</div>
+            <div class="about-name">
+                <span data-value="main.me.firstName">...</span>
+                <!-- &nbsp -->
+                <span data-value="main.me.lastName">...</span>,
+                <span data-value="main.me.birthDate" data-transformer="yearsElapsedSinceDate">...</span>
+                ans
+            </div>
+            <div data-value="main.me.about">...</div>
+            <div class="about-others" data-value="main.me.others">Autres :
+                <div class="about-other" data-value="sub">...</p>
             </div>
         </div>
     </div>
@@ -89,6 +98,6 @@
     <script src="js/builder.js"></script>
     <script src="js/dynofolio.js"></script>
     <!--live reload-->
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"><'+'/script>')</script>
 </body>
 </html>
