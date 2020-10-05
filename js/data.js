@@ -43,5 +43,13 @@ var mainData = {
                 "proof 2"
             ]
         }
+    ],
+    projects:[
+        {
+            name: "dynofolio",
+            image: "myDyno",
+            link: "https://github.com/Crepe-Party/dynofolio",
+            description: "Easy to implement animated portfolio (for developpers)",
+        }
     ]
 }
