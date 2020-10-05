@@ -3,6 +3,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     margin: 0;
+    word-wrap: break-word;
 }
 #me{
     width: 100%;
@@ -39,7 +40,7 @@ body{
     color: white;
 }
 #me > .about > *{
-    padding: 10px;
+    padding: 10px 40px;
     width: 100%;
 }
 #me > .about > .about-text{
@@ -51,7 +52,4 @@ body{
 #me > .about > .about-name{
     font-size: 30;
     font-weight: bold;
-}
-#others{
-    background-color: white;
 }
