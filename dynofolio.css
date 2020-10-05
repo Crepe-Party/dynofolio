@@ -1,9 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --bg-color: darkviolet;
+}
 /* me */
 body{
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     margin: 0;
     word-wrap: break-word;
+    color: white;
+    background-color: rgb(30, 30, 30);
 }
 #me{
     width: 100%;
@@ -36,23 +44,74 @@ body{
     justify-content: center;
 }
 .about{
-    background-color:#8b00bd;
+    background-color: var(--bg-color);
     color: white;
+    padding: 40px;
 }
 .about > *{
-    padding: 10px 40px;
     width: 100%;
 }
 .about-text{
     display: flex;
     justify-content: center;
     font-size: 30px;
-    padding-top: 40px;
 }
 .about-name{
     font-size: 30;
     font-weight: bold;
 }
 /* jobs */
+#jobs{
+    border-left: dotted 5px var(--bg-color);
+    margin: 20px;
+    margin-left: 200px;
+}
+.job{
+    border-left: solid 5px var(--bg-color);
+    padding: 0 20px;
+    position: relative;
+    left: -5px;
+    margin: 40px 0;
+}
+.job-name{
+    font-size: 40px;
+}
+.job-location{
+    padding-bottom: 20px;
+}
+.job-startdate, .job-enddate, .job-startdate-point, .job-enddate-point{
+    position: absolute;
+    left: -175px;
+    text-align: right;
+    width: 150px;
+}
+.job-startdate-point, .job-enddate-point{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border: solid 5px var(--bg-color);
+    border-radius: 100%;
+    left: -12px;
+}
+.job-startdate, .job-startdate-point{
+    bottom: 0;
+}
+.job-enddate, .job-enddate-point{
+    top: 0;
+}
+.job-description, .job-tasks, .job-skills{
+    padding-bottom: 20px;
+}
+.job-description-title, .job-task-title, .job-skill-title{
+    font-size: 25px;
+    padding-bottom: 5px;
+}
+
 /* skills */
+#skills{
+
+}
 /* projects */
+#projects{
+
+}

@@ -25,25 +25,31 @@
                 <span data-value="main.me.firstName">...</span>
                 <!-- &nbsp -->
                 <span data-value="main.me.lastName">...</span>,
-                <span data-value="main.me.birthDate" data-transformer="yearsElapsedSinceDate">...</span>
-                ans
+                <span data-value="main.me.birthDate" data-transformer="yearsElapsedSinceDate">...</span> ans
             </div>
             <div data-value="main.me.about">...</div>
             <div class="about-others" data-value="main.me.others">Autres :
-                <div class="about-other" data-value="sub">...</p>
+                <div class="about-other" data-value="sub">...</div>
             </div>
         </div>
     </div>
     <div id="jobs" data-value="main.jobs">
         <div class="job">
             <div class="job-name" data-value="sub.name">...</div>
-            <div class="job-location" data-value="sub.location">...</div>
+            <div class="job-location">Emplacement: <span data-value="sub.location">...</span></div>
             <div class="job-startdate" data-value="sub.startDate" data-transformer="prettyDate">...</div>
+            <div class="job-startdate-point"></div>
             <div class="job-enddate" data-value="sub.endDate" data-transformer="prettyDate">...</div>
-            <div class="job-description" data-value="sub.description">...</div>
+            <div class="job-enddate-point"></div>
+            <div class="job-description">
+                <div class="job-description-title">Description :</div>
+                <div class="job-description-content" data-value="sub.description">...</div>
+            </div>
+            <div class="job-task-title">Tâches :</div>
             <div class="job-tasks" data-value="sub.tasks">
                 <div class="job-task" data-value="sub">...</div>
             </div>
+            <div class="job-skill-title">Compétences dévelopées :</div>
             <div class="job-skills" data-value="sub.skillsDeveloped">
                 <div class="job-skill" data-value="sub">...</div>
             </div>
