@@ -12,6 +12,11 @@ body{
     word-wrap: break-word;
     color: white;
     background-color: rgb(30, 30, 30);
+    opacity: 1;
+    transition: opacity 300ms;
+}
+body.loading{
+    opacity: 0;
 }
 #me{
     width: 100%;
