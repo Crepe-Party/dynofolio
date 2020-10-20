@@ -67,6 +67,30 @@ body.loading{
     font-size: 30;
     font-weight: bold;
 }
+
+/* menu */
+#menu{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+}
+.menu-children{
+    flex-grow: 2;
+    text-align: center;
+    font-size: 40px;
+    padding: 10px;
+    cursor: pointer;
+}
+#menu-jobs, #menu-projects{
+    
+}
+#menu-skills{
+    border-left: solid 1px var(--main-color);
+    border-right: solid 1px var(--main-color);
+}
+
 /* jobs */
 #jobs{
     border-left: dotted 5px var(--main-color);
