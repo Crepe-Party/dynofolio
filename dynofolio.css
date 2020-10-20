@@ -2,8 +2,10 @@
     box-sizing: border-box;
 }
 :root{
-    --bg-color: darkviolet;
+    --main-color: rgb(102, 0, 146);
+    --bg-color: rgb(30, 30, 30);
 }
+
 /* me */
 body{
     font-family: 'Open Sans', sans-serif;
@@ -49,7 +51,7 @@ body.loading{
     justify-content: center;
 }
 .about{
-    background-color: var(--bg-color);
+    background-color: var(--main-color);
     color: white;
     padding: 40px;
 }
@@ -67,12 +69,12 @@ body.loading{
 }
 /* jobs */
 #jobs{
-    border-left: dotted 5px var(--bg-color);
+    border-left: dotted 5px var(--main-color);
     margin: 20px;
     margin-left: 200px;
 }
 .job{
-    border-left: solid 5px var(--bg-color);
+    border-left: solid 5px var(--main-color);
     padding: 0 20px;
     position: relative;
     left: -5px;
@@ -93,8 +95,8 @@ body.loading{
 .job-startdate-point, .job-enddate-point{
     width: 20px;
     height: 20px;
-    background-color: black;
-    border: solid 5px var(--bg-color);
+    background-color: var(--bg-color);
+    border: solid 5px var(--main-color);
     border-radius: 100%;
     left: -12px;
 }
@@ -114,7 +116,40 @@ body.loading{
 
 /* skills */
 #skills{
-
+    margin: 20px;
+    margin-left: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.skill{
+    width: 450px;
+    padding: 0 20px;
+    left: -5px;
+    margin: 10px 0;
+}
+.skill-name{
+    font-size: 25px;
+}
+.skill-bar{
+    position: relative;
+    width: 400px;
+    margin: 10px 0;
+    height: 5px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+.skill-point{
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-color);
+    border: solid 5px var(--main-color);
+    border-radius: 100%;
+    position: absolute;
+    top: -8px;
+    left: calc(400px / 10 * attr(data-value) - 10px);
+}
+.skill-proofs{
+    margin-left: 20px;
 }
 /* projects */
 #projects{

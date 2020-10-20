@@ -43,7 +43,23 @@ var mainData = {
                 "proof 1",
                 "proof 2"
             ]
-        },{}
+        },
+        {
+            name: "skill 2",
+            masteryLevelOf10: 9,
+            proofOfCompetence:[
+                "proof 3",
+                "proof 4"
+            ]
+        },
+        {
+            name: "skill 3",
+            masteryLevelOf10: 2,
+            proofOfCompetence:[
+                "proof 5",
+                "proof 6"
+            ]
+        },
     ],
     projects:[
         {
