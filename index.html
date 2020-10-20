@@ -35,11 +35,11 @@
     </div>
     <!-- menu -->
     <div id="menu">
-        <div id="menu-jobs" class="menu-children">Emplois</div>
-        <div id="menu-skills" class="menu-children">Compétences</div>
-        <div id="menu-projects" class="menu-children">Projets</div>
+        <div id="menu-jobs" class="menu-child menu-active">Emplois</div>
+        <div id="menu-skills" class="menu-child">Compétences</div>
+        <div id="menu-projects" class="menu-child">Projets</div>
     </div>
-    <div id="jobs" data-value="main.jobs">
+    <div id="jobs" class="content-child" data-value="main.jobs">
         <div class="job">
             <div class="job-name" data-value="sub.name">...</div>
             <div class="job-location">Emplacement: <span data-value="sub.location">...</span></div>
@@ -61,7 +61,7 @@
             </div>
         </div>
     </div>
-    <div id="skills" data-value="main.skills">
+    <div id="skills" class="content-child hidden" data-value="main.skills">
         <div class="skill">
             <div class="skill-name" data-value="sub.name">...</div>
             <div class="skill-bar">
@@ -73,7 +73,7 @@
             </div>
         </div>
     </div>
-    <div id="projects">
+    <div id="projects" class="content-child hidden">
         <div class="project">
             <div class="project-content">
                 <div class="project-name">dynofolio</div>
