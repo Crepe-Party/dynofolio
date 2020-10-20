@@ -64,7 +64,13 @@ var mainData = {
     projects:[
         {
             name: "dynofolio",
-            image: "myDyno",
+            image: "default",
+            link: "https://github.com/Crepe-Party/dynofolio",
+            description: "Easy to implement animated portfolio (for developpers)",
+        },
+        {
+            name: "dynofolio",
+            image: "default",
             link: "https://github.com/Crepe-Party/dynofolio",
             description: "Easy to implement animated portfolio (for developpers)",
         }

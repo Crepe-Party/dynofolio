@@ -71,7 +71,7 @@ body.loading{
 #jobs{
     border-left: dotted 5px var(--main-color);
     margin: 20px;
-    margin-left: 200px;
+    margin: 0 200px;
 }
 .job{
     border-left: solid 5px var(--main-color);
@@ -117,7 +117,7 @@ body.loading{
 /* skills */
 #skills{
     margin: 20px;
-    margin-left: 200px;
+    margin: 0 200px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -153,5 +153,29 @@ body.loading{
 }
 /* projects */
 #projects{
-
+    margin: 20px;
+    margin: 0 200px;
+}
+.project{
+    background-image: url("assets/images/projects/default.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: solid 1px var(--main-color);
+}
+.project-content{
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+}
+.project-name{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.project-link{
+    padding-bottom: 10px;
+}
+.project-link > a{
+    color: rgb(189, 36, 255);
 }
