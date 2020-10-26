@@ -25,17 +25,7 @@ function patchWithData(element, data=null){
             console.warn(`${source} source is not supported`);
     }
 
-    if(element.dataset.customBuilder){
-        var customBuilder = customBuilders[element.dataset.customBuilder]
-        if(customBuilder){
-            let shouldStop = customBuilder(dataValue);
-            if(shouldStop) 
-                return;
-        } else {
-            console.warn(`custom builder ${element.dataset.customBuilder} doesn't exist`);
-        }
-    }
-
+    
     //transformer
     if(element.dataset.transformer){
         var transformer = transformers[element.dataset.transformer]
@@ -45,7 +35,16 @@ function patchWithData(element, data=null){
             console.warn(`transformer ${transformer} doesn't exist`);
         }
     }
-
+    
+    var shouldFillContent = true;
+    if(element.dataset.customBuilder){
+        var customBuilder = customBuilders[element.dataset.customBuilder]
+        if(customBuilder){
+            shouldFillContent = !customBuilder(dataValue, element);
+        } else {
+            console.warn(`custom builder ${element.dataset.customBuilder} doesn't exist`);
+        }
+    }
     //array
     if(Array.isArray(dataValue)){
         var childrenToClone = [...element.children];
@@ -60,7 +59,9 @@ function patchWithData(element, data=null){
         return;
     }
     // normal
-    element.innerText = dataValue;    
+    if(shouldFillContent){
+        element.innerText = dataValue;
+    }
 }
 var transformers = {
     stampToLocalTimeElapsed(stamp){
@@ -73,5 +74,11 @@ var transformers = {
         var date = new Date(dateStamp);
         return `${date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}`
         // return `${date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long'})}`
-    }
+    },
+}
+var customBuilders = {
+    skillPointStyle(data, element){
+        element.style.left = `calc(400px / 10 * ${data} - 10px)`;
+        return true;
+    },
 }
