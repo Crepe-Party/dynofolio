@@ -170,12 +170,11 @@ body.loading{
 .skill-point{
     width: 20px;
     height: 20px;
-    background-color: var(--bg-color);
+    background-color: var(--main-color);
     border: solid 5px var(--main-color);
     border-radius: 100%;
     position: absolute;
     top: -8px;
-    left: calc(400px / 10 * attr(data-value) - 10px);
 }
 .skill-proofs{
     margin-left: 20px;

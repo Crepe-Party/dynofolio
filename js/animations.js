@@ -1,21 +1,22 @@
+var speed = 2;
 function meAnimations(){
-    var speed = 1;
-    var tl = new TimelineLite();
-    console.log(10, split);
+    var tlme = new TimelineLite();
     
     var split = new SplitText("#name", {type:"lines"});
-    tl.add(TweenMax.staggerFrom(split.lines, 1*speed, {z:-1000, opacity:0, force3D:true, ease: Elastic.easeOut.config(2, 0.2)}, 0.3*speed));
+    tlme.add(TweenMax.staggerFrom(split.lines, 2*speed, {z:-1000, opacity:0, force3D:true, ease: Elastic.easeOut.config(2, 0.2)}, 0.3*speed));
     var split = new SplitText("#title", {type:"lines"});
-    tl.add(TweenMax.staggerFrom(split.lines, 1*speed, {z:-1000, opacity:0, force3D:true, ease: Elastic.easeOut.config(2, 0.2)}, 0.3*speed));
+    tlme.add(TweenMax.staggerFrom(split.lines, 1*speed, {z:-1000, opacity:0, force3D:true, ease: Elastic.easeOut.config(2, 0.2)}, 0.3*speed));
 
-    tl.add(TweenMax.staggerFrom(".about", 1.5, { rotationX:-90, transformOrigin:"50% 0%", ease:Elastic.easeOut}, 0.4));
+    tlme.add(TweenMax.staggerFrom(".about", 1.5*speed, { rotationX:-90, transformOrigin:"50% 0%", ease:Elastic.easeOut}, 0.4*speed));
 
 }
 function jobsAnimations(){
     
 }
 function skillsAnimation(){
-    
+    TweenMax.set(".skill", {scale:0})
+    TweenMax.staggerTo(".skill", 1*speed, {scale: 1, ease: Back.easeOut}, 0.5*speed);
+    TweenMax.staggerFrom(".skill-point", 2*speed, {left: -10}, 0.5*speed);
 }
 function projectsAnimations(){
     
