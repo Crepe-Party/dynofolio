@@ -25,17 +25,7 @@ function patchWithData(element, data=null){
             console.warn(`${source} source is not supported`);
     }
 
-    if(element.dataset.customBuilder){
-        var customBuilder = customBuilders[element.dataset.customBuilder]
-        if(customBuilder){
-            let shouldStop = customBuilder(dataValue);
-            if(shouldStop) 
-                return;
-        } else {
-            console.warn(`custom builder ${element.dataset.customBuilder} doesn't exist`);
-        }
-    }
-
+    
     //transformer
     if(element.dataset.transformer){
         var transformer = transformers[element.dataset.transformer]
@@ -45,7 +35,20 @@ function patchWithData(element, data=null){
             console.warn(`transformer ${transformer} doesn't exist`);
         }
     }
-
+    
+    var shouldFillContent = true;
+    if(element.dataset.builder){
+        var customBuilder = customBuilders[element.dataset.builder]
+        if(customBuilder){
+            shouldFillContent = !!customBuilder(dataValue, element);
+        } else {
+            console.warn(`custom builder ${element.dataset.builder} doesn't exist`);
+        }
+    }
+    if(!shouldFillContent){ //skipping
+        [...element.children].forEach(child => patchWithData(child, data));
+        return;
+    }
     //array
     if(Array.isArray(dataValue)){
         var childrenToClone = [...element.children];
@@ -60,7 +63,7 @@ function patchWithData(element, data=null){
         return;
     }
     // normal
-    element.innerText = dataValue;    
+    element.innerText = dataValue;
 }
 var transformers = {
     stampToLocalTimeElapsed(stamp){
@@ -71,7 +74,22 @@ var transformers = {
     },
     prettyDate(dateStamp){
         var date = new Date(dateStamp);
-        return `${date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}`
+        return `${date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}`;
         // return `${date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long'})}`
-    }
+    },
+}
+//returns shouldFillContent
+var customBuilders = {
+    skillPointStyle(data, element){
+        element.style.left = `calc(400px / 10 * ${data} - 10px)`;
+        return false;
+    },
+    toProjectBg(name, element){
+        element.style.backgroundImage = `url(assets/images/projects/${name || "default.png"})`;
+        return false;
+    },
+    toHref(href, element){
+        element.href = href;
+        return false;
+    },
 }
