@@ -28,16 +28,17 @@ body.loading{
     background-size: cover;
     background-repeat: no-repeat;
 }
-#me > .top{
-    background-color: #1b1f2b;
-    opacity: 0.8;
+#me-content{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#me-top{
     width: 100%;
     height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#me > .top > .box-name{
+#me-top > .box-name{
     color: whitesmoke;
     border: solid white 1px;
     padding: 20px 60px;
