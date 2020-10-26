@@ -33,6 +33,23 @@ var mainData = {
                 "Skill 3"
             ]
         },
+        {
+            name: "training1",
+            location: "forêt",
+            startDate: new Date("2001-02-01").getTime(),
+            endDate: Date.now(),
+            description: "Cutting tree",
+            tasks:[
+                "Task 1",
+                "Task 2",
+                "Task 3"
+            ],
+            skillsDeveloped:[
+                "Skill 1",
+                "Skill 2",
+                "Skill 3"
+            ]
+        },
         // {}
     ],
     skills:[
