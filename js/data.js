@@ -33,6 +33,23 @@ var mainData = {
                 "Skill 3"
             ]
         },
+        {
+            name: "training1",
+            location: "forêt",
+            startDate: new Date("2001-02-01").getTime(),
+            endDate: Date.now(),
+            description: "Cutting tree",
+            tasks:[
+                "Task 1",
+                "Task 2",
+                "Task 3"
+            ],
+            skillsDeveloped:[
+                "Skill 1",
+                "Skill 2",
+                "Skill 3"
+            ]
+        },
     ],
     skills:[
         {
@@ -63,13 +80,13 @@ var mainData = {
     projects:[
         {
             name: "dynofolio",
-            image: "default.png",
+            image: "dyno.png",
             link: "https://github.com/Crepe-Party/dynofolio",
             description: "Easy to implement animated portfolio (for developpers)",
         },
         {
             name: "ProgCraft",
-            image: "dyno.png",
+            image: "default.png",
             link: "https://github.com/Crepe-Party/ProgCraft",
             description: "learn pls",
         }

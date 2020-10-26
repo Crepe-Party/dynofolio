@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DynoFolio</title>
-    <link rel="stylesheet" href="dynofolio.css"/>
+    <link rel="stylesheet" href="dynofolio.css" />
 </head>
+
 <body class="loading">
     <!--CONTENT-->
     <div id="me">
@@ -39,46 +41,50 @@
         <div id="menu-skills" class="menu-child">Compétences</div>
         <div id="menu-projects" class="menu-child">Projets</div>
     </div>
-    <div id="jobs" class="content-child" data-value="main.jobs">
-        <div class="job">
-            <div class="job-name" data-value="sub.name">...</div>
-            <div class="job-location">Emplacement: <span data-value="sub.location">...</span></div>
-            <div class="job-startdate" data-value="sub.startDate" data-transformer="prettyDate">...</div>
-            <div class="job-startdate-point"></div>
-            <div class="job-enddate" data-value="sub.endDate" data-transformer="prettyDate">...</div>
-            <div class="job-enddate-point"></div>
-            <div class="job-description">
-                <div class="job-description-title">Description :</div>
-                <div class="job-description-content" data-value="sub.description">...</div>
-            </div>
-            <div class="job-task-title">Tâches :</div>
-            <div class="job-tasks" data-value="sub.tasks">
-                <div class="job-task" data-value="sub">...</div>
-            </div>
-            <div class="job-skill-title">Compétences dévelopées :</div>
-            <div class="job-skills" data-value="sub.skillsDeveloped">
-                <div class="job-skill" data-value="sub">...</div>
-            </div>
-        </div>
-    </div>
-    <div id="skills" class="content-child hidden" data-value="main.skills">
-        <div class="skill">
-            <div class="skill-name" data-value="sub.name">...</div>
-            <div class="skill-bar">
-                <div class="skill-point" data-value="sub.masteryLevelOf10" data-builder="skillPointStyle" style="left: data-value"></div>
-            </div>
-            <div class="skill-proofs">
-                <div class="skill-proof">proof 1</div>
-                <div class="skill-proof">proof 1</div>
+    <div id="menu-content">
+        <div id="jobs" class="content-child" data-value="main.jobs">
+            <div class="job">
+                <div class="job-name" data-value="sub.name">...</div>
+                <div class="job-location">Emplacement: <span data-value="sub.location">...</span></div>
+                <div class="job-startdate" data-value="sub.startDate" data-transformer="prettyDate">...</div>
+                <div class="job-startdate-point"></div>
+                <div class="job-enddate" data-value="sub.endDate" data-transformer="prettyDate">...</div>
+                <div class="job-enddate-point"></div>
+                <div class="job-description">
+                    <div class="job-description-title">Description :</div>
+                    <div class="job-description-content" data-value="sub.description">...</div>
+                </div>
+                <div class="job-task-title">Tâches :</div>
+                <div class="job-tasks" data-value="sub.tasks">
+                    <div class="job-task" data-value="sub">...</div>
+                </div>
+                <div class="job-skill-title">Compétences dévelopées :</div>
+                <div class="job-skills" data-value="sub.skillsDeveloped">
+                    <div class="job-skill" data-value="sub">...</div>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="projects" class="content-child hidden" data-value="main.projects">
-        <div class="project" data-value="sub.image" data-builder="toProjectBg">
-            <div class="project-content">
-                <div class="project-name" data-value="sub.name">...</div>
-                <div class="project-link"><a data-builder="toHref" data-value="sub.link">Project source link</a></div>
-                <div class="project-description" data-value="sub.description">...</div>
+        <div id="skills" class="content-child content-hidden" data-value="main.skills">
+            <div class="skill">
+                <div class="skill-name" data-value="sub.name">...</div>
+                <div class="skill-bar">
+                    <div class="skill-point" data-value="sub.masteryLevelOf10" data-builder="skillPointStyle"
+                        style="left: data-value"></div>
+                </div>
+                <div class="skill-proofs">
+                    <div class="skill-proof">proof 1</div>
+                    <div class="skill-proof">proof 1</div>
+                </div>
+            </div>
+        </div>
+        <div id="projects" class="content-child content-hidden" data-value="main.projects">
+            <div class="project" data-value="sub.image" data-builder="toProjectBg">
+                <div class="project-content">
+                    <div class="project-name" data-value="sub.name">...</div>
+                    <div class="project-link"><a data-builder="toHref" data-value="sub.link">Project source link</a>
+                    </div>
+                    <div class="project-description" data-value="sub.description">...</div>
+                </div>
             </div>
         </div>
     </div>
@@ -88,6 +94,7 @@
     <script src="js/builder.js"></script>
     <script src="js/dynofolio.js"></script>
     <!--live reload-->
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"><'+'/script>')</script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"><' + '/script>')</script>
 </body>
+
 </html>

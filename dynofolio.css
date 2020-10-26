@@ -95,11 +95,39 @@ body.loading{
 .menu-active{
     background-color: rgb(40, 40, 40);
 }
+#menu-content{
+    width: 100%;
+    position: relative;
+    overflow-x: clip;
+}
+.content-hidden{
+    visibility: hidden !important;
+    transition: 0s !important;
+}
+.content-child {
+    margin: 0 200px;
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 400px);
+    transition: 300ms translate, 300ms opacity;
+    opacity: 1;
+    translate: 0;
+}
+.content-child.left-position {
+    translate: -30vw;
+    opacity: 0;
+}
+.content-child.right-position {
+    translate: 30vw;
+    opacity: 0;
+}
 /* jobs */
 #jobs{
     border-left: dotted 5px var(--main-color);
-    margin: 20px;
-    margin: 0 200px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 .job{
     border-left: solid 5px var(--main-color);
@@ -107,6 +135,10 @@ body.loading{
     position: relative;
     left: -5px;
     margin: 40px 0;
+    margin-top: 0;
+}
+.job:last-child {
+    margin-bottom: 0;
 }
 .job-name{
     font-size: 40px;
@@ -144,8 +176,6 @@ body.loading{
 
 /* skills */
 #skills{
-    margin: 20px;
-    margin: 0 200px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -180,10 +210,8 @@ body.loading{
     margin-left: 20px;
 }
 /* projects */
-#projects{
-    margin: 20px;
-    margin: 0 200px;
-}
+/* #projects{
+} */
 .project{
     background-image: url("assets/images/projects/default.png");
     background-size: cover;
@@ -207,4 +235,8 @@ body.loading{
 }
 .project-link > a{
     color: rgb(189, 36, 255);
+}
+
+.zone500px{
+    height: 500px;
 }
