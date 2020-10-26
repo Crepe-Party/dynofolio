@@ -1,4 +1,4 @@
-var speed = 2;
+var speed = 1;
 function meAnimations(){
     var tlme = new TimelineLite();
     
@@ -14,9 +14,12 @@ function jobsAnimations(){
     
 }
 function skillsAnimation(){
+    var tlskills = new TimelineLite();
+
     TweenMax.set(".skill", {scale:0})
-    TweenMax.staggerTo(".skill", 1*speed, {scale: 1, ease: Back.easeOut}, 0.5*speed);
-    TweenMax.staggerFrom(".skill-point", 2*speed, {left: -10}, 0.5*speed);
+    TweenMax.staggerTo(".skill", 1*speed, {scale: 1, ease: Back.easeOut}, 1*speed);
+    
+    TweenMax.staggerFrom(".skill-point", 1*speed, { left: 0 }, 1*speed);
 }
 function projectsAnimations(){
     
