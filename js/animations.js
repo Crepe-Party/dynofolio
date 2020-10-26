@@ -11,11 +11,15 @@ function meAnimations(){
 
 }
 function jobsAnimations(){
-    
+    var controller = new ScrollMagic.Controller();
+    document.querySelectorAll(".job").forEach(job => {
+        new ScrollMagic.Scene({triggerElement: job, triggerHook: 0.9})
+            .setTween(TweenMax.from(job, 1, {x: "-101%"}))
+            .addIndicators({name: "animation"})
+            .addTo(controller);
+    })
 }
 function skillsAnimation(){
-    var tlskills = new TimelineLite();
-
     TweenMax.set(".skill", {scale:0})
     TweenMax.staggerTo(".skill", 1*speed, {scale: 1, ease: Back.easeOut}, 1*speed);
     
@@ -26,6 +30,7 @@ function projectsAnimations(){
 }
 document.addEventListener("DOMContentLoaded", event => {
     meAnimations();
+    jobsAnimations();
     document.getElementById("menu-jobs").addEventListener("click", event => {
         jobsAnimations();
     })
