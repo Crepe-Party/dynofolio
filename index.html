@@ -11,27 +11,29 @@
 <body class="loading">
     <!--CONTENT-->
     <div id="me">
-        <div class="top">
-            <div class="box-name">
-                <div id="name">
-                    <span data-value="main.me.firstName">...</span>
-                    &nbsp
-                    <span data-value="main.me.lastName">...</span>
+        <div id="me-content">
+            <div id="me-top">
+                <div class="box-name">
+                    <div id="name">
+                        <span data-value="main.me.firstName">...</span>
+                        &nbsp
+                        <span data-value="main.me.lastName">...</span>
+                    </div>
+                    <div id="title" data-value="main.me.title">...</div>
                 </div>
-                <div id="title" data-value="main.me.title">...</div>
             </div>
-        </div>
-        <div class="about">
-            <div class="about-text">À propos</div>
-            <div class="about-name">
-                <span data-value="main.me.firstName">...</span>
-                <!-- &nbsp -->
-                <span data-value="main.me.lastName">...</span>,
-                <span data-value="main.me.birthDate" data-transformer="yearsElapsedSinceDate">...</span> ans
-            </div>
-            <div data-value="main.me.about">...</div>
-            <div class="about-others" data-value="main.me.others">Autres :
-                <div class="about-other" data-value="sub">...</div>
+            <div class="about">
+                <div class="about-text">À propos</div>
+                <div class="about-name">
+                    <span data-value="main.me.firstName">...</span>
+                    <!-- &nbsp -->
+                    <span data-value="main.me.lastName">...</span>,
+                    <span data-value="main.me.birthDate" data-transformer="yearsElapsedSinceDate">...</span> ans
+                </div>
+                <div data-value="main.me.about">...</div>
+                <div class="about-others" data-value="main.me.others">Autres :
+                    <div class="about-other" data-value="sub">...</div>
+                </div>
             </div>
         </div>
     </div>
@@ -89,10 +91,20 @@
         </div>
     </div>
     <!--END CONTENT-->
+    <!-- gsap lib -->
+    <script src="js/libs/TweenMax.min.js"></script>
+    <script src="js/libs/TimelineMax.min.js"></script>
+    <script src="js/libs/utils/SplitText.min.js"></script>
+    <script src="js/libs/TweenMax.min.js"></script>
+    <script src="js/libs/ScrollMagic.min.js"></script>
+    <script src="js/libs/debug.addIndicators.min.js"></script>
+    <script src="js/libs/animation.gsap.min.js"></script>
+
     <script src="js/utils.js"></script>
     <script src="js/data.js"></script>
     <script src="js/builder.js"></script>
     <script src="js/dynofolio.js"></script>
+    <script src="js/animations.js"></script>
     <!--live reload-->
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"><' + '/script>')</script>
 </body>
