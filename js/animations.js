@@ -14,7 +14,7 @@ function jobsAnimations(){
     var controller = new ScrollMagic.Controller();
     document.querySelectorAll(".job").forEach(job => {
         new ScrollMagic.Scene({triggerElement: job, triggerHook: 0.9})
-            .setTween(TweenMax.from(job, 1, {x: "-101%"}))
+            .setTween(TweenMax.fromTo(job, 1, {x: "-101%"}, {x: "0%"}))
             .addIndicators({name: "animation"})
             .addTo(controller);
     })
