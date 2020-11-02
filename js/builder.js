@@ -81,7 +81,9 @@ var transformers = {
 //returns shouldFillContent
 var customBuilders = {
     skillPointStyle(data, element){
-        element.style.left = `calc(400px / 10 * ${data} - 10px)`;
+        var left = 400 / 10 * data - 10
+        element.style.left = `${left}px`;
+        element.setAttribute("value-left", left);
         return false;
     },
     toProjectBg(name, element){

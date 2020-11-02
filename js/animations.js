@@ -20,10 +20,19 @@ function jobsAnimations(){
     })
 }
 function skillsAnimation(){
+    var time = new TimelineLite();
     TweenMax.set(".skill", {scale:0})
-    TweenMax.staggerTo(".skill", 1*speed, {scale: 1, ease: Back.easeOut}, 1*speed);
     
-    TweenMax.staggerFrom(".skill-point", 1*speed, { left: 0 }, 1*speed);
+    var start = 0
+    document.querySelectorAll(".skill").forEach(skill => {
+        var skillPoint = skill.querySelector(".skill-point");
+        var left = skillPoint.getAttribute("value-left");
+        
+        time.add(TweenMax.to(skill, 1*speed, {scale: 1, ease: Back.easeOut}), start*speed);
+        time.add(TweenMax.fromTo(skillPoint, 3*speed, { left: 0}, {left: left}), start*speed);
+
+        start++;
+    })
 }
 function projectsAnimations(){
     
