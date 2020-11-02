@@ -86,9 +86,15 @@ var mainData = {
         },
         {
             name: "ProgCraft",
-            image: "default.png",
+            image: "robert.png",
             link: "https://github.com/Crepe-Party/ProgCraft",
             description: "learn pls",
-        }
+        },
+        {
+            name: "RythmTree",
+            image: "rythm.png",
+            link: "https://github.com/DiogoVieiraFerreira/RythmTree.git",
+            description: "learn pls",
+        },
     ]
 }

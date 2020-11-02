@@ -26,7 +26,9 @@ function skillsAnimation(){
     TweenMax.staggerFrom(".skill-point", 1*speed, { left: 0 }, 1*speed);
 }
 function projectsAnimations(){
-    
+    TweenMax.set('.project', {marginTop: 100, opacity: 0});
+    TweenMax.staggerTo('.project', 1*speed, {marginTop: 0, opacity: 1}, 0.5*speed);
+    // TweenMax.staggerFrom('.project', 1*speed, {marginTop: 100, opacity: 0}, 0.5*speed)
 }
 document.addEventListener("DOMContentLoaded", event => {
     meAnimations();
@@ -37,7 +39,7 @@ document.addEventListener("DOMContentLoaded", event => {
     document.getElementById("menu-skills").addEventListener("click", event => {
         skillsAnimation();
     })
-    document.getElementById("menu-skills").addEventListener("click", event => {
+    document.getElementById("menu-projects").addEventListener("click", event => {
         projectsAnimations();
     })
 })
