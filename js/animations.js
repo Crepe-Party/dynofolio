@@ -34,8 +34,8 @@ function skillsAnimation(){
     })
 }
 function projectsAnimations(){
-    TweenMax.set('.project', {marginTop: 100, opacity: 0});
-    TweenMax.staggerTo('.project', 1*speed, {marginTop: 0, opacity: 1}, 0.5*speed);
+    TweenMax.set('.project', {marginTop: 400, opacity: 0, rotation: 20});
+    TweenMax.staggerTo('.project', 1*speed, {marginTop: 0, opacity: 1, rotation:0}, 0.5*speed);
     // TweenMax.staggerFrom('.project', 1*speed, {marginTop: 100, opacity: 0}, 0.5*speed)
 }
 document.addEventListener("DOMContentLoaded", event => {
