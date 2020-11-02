@@ -3,12 +3,11 @@ function meAnimations(){
     var tlme = new TimelineLite();
     
     var split = new SplitText("#name", {type:"lines"});
-    tlme.add(TweenMax.staggerFrom(split.lines, 2*speed, {z:-1000, opacity:0, force3D:true, ease: Elastic.easeOut.config(2, 0.2)}, 0.3*speed));
+    tlme.add(TweenMax.staggerFrom(split.lines, 3*speed, {z:-1000, opacity:0, force3D:true, ease: Elastic.easeOut.config(2, 0.2)}), 0);
     var split = new SplitText("#title", {type:"lines"});
-    tlme.add(TweenMax.staggerFrom(split.lines, 1*speed, {z:-1000, opacity:0, force3D:true, ease: Elastic.easeOut.config(2, 0.2)}, 0.3*speed));
+    tlme.add(TweenMax.staggerFrom(split.lines, 1*speed, {z:-1000, opacity:0, force3D:true, ease: Elastic.easeOut.config(2, 0.2)}), 1);
 
-    tlme.add(TweenMax.staggerFrom(".about", 1.5*speed, { rotationX:-90, transformOrigin:"50% 0%", ease:Elastic.easeOut}, 0.4*speed));
-
+    tlme.add(TweenMax.staggerFrom(".about", 2.5*speed, { rotationX:-90, transformOrigin:"50% 0%", ease:Elastic.easeOut}), 2);
 }
 function jobsAnimations(){
     var controller = new ScrollMagic.Controller();
