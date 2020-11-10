@@ -149,9 +149,9 @@ body.loading{
 }
 .job-startdate, .job-enddate, .job-startdate-point, .job-enddate-point{
     position: absolute;
-    left: -175px;
+    left: -200px;
     text-align: right;
-    width: 150px;
+    width: 180px;
 }
 .job-startdate-point, .job-enddate-point{
     width: 20px;
@@ -210,8 +210,6 @@ body.loading{
     margin-left: 20px;
 }
 /* projects */
-/* #projects{
-} */
 .project{
     background-image: url("assets/images/projects/default.png");
     background-size: cover;
@@ -239,4 +237,44 @@ body.loading{
 
 .zone500px{
     height: 500px;
+}
+@media screen and (max-width: 800px) {
+    .content-child{
+        margin: 0 10px;
+        width: 97%;
+    }
+    .job{
+        margin-bottom: 100px;
+    }
+    .job-startdate, .job-enddate{
+        left: 10px;
+        text-align: left;
+    }
+    .job-startdate{
+        bottom: -20px;
+    }
+    .job-enddate{
+        top: -35px;
+    }
+    @media screen and (max-width: 600px) {
+        #menu{
+            display: block;
+        }
+        #menu-skills{
+            border: 0;
+            border-top: solid 1px var(--main-color);
+            border-bottom: solid 1px var(--main-color);
+        }
+        .skill{
+            padding: 0px 0px;
+        }
+        @media screen and (max-width: 400px) {
+            #me-top > .box-name{
+                padding: 20px 10px;
+            }
+            .about{
+                padding: 40px 10px;
+            }
+        }
+    }
 }
