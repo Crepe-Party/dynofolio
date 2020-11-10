@@ -13,8 +13,8 @@ function jobsAnimations(){
     var controller = new ScrollMagic.Controller();
     document.querySelectorAll(".job").forEach(job => {
         new ScrollMagic.Scene({triggerElement: job, triggerHook: 0.9})
-            .setTween(TweenMax.fromTo(job, 1, {x: "-101%"}, {x: "0%"}))
-            .addIndicators({name: "animation"})
+            .setTween(TweenMax.fromTo(job, 1, {x: "-101%", opacity: 0}, {x: "0%", opacity: 1}))
+            // .addIndicators({name: "animation"})
             .addTo(controller);
     })
 }
@@ -36,7 +36,6 @@ function skillsAnimation(){
 function projectsAnimations(){
     TweenMax.set('.project', {marginTop: 400, opacity: 0, rotation: 20});
     TweenMax.staggerTo('.project', 1*speed, {marginTop: 0, opacity: 1, rotation:0}, 0.5*speed);
-    // TweenMax.staggerFrom('.project', 1*speed, {marginTop: 100, opacity: 0}, 0.5*speed)
 }
 document.addEventListener("DOMContentLoaded", event => {
     meAnimations();
