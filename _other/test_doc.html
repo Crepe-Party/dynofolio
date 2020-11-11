@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DynoFolio</title>
+    <link rel="stylesheet" href="dynofolio.css" />
+</head>
+
+<body class="loading">
+    <!--CONTENT-->
+    <h1 data-value="main.name">...</h1>
+    <b data-value="main.infos.currentJob">...</b>
+
+    <h2>Skills</h2>
+    <ul data-value="main.skills">
+        <li data-value="sub">...</li>
+    </ul>
+
+    <h2>Jobs</h2>
+    <table>
+        <thead>
+            <th>Title</th>
+            <th>Place</th>
+            <th>Length</th>
+            <th>Description</th>
+        </thead>
+        <tbody data-value="main.jobs">
+            <td data-value="sub.title">...</td>
+            <td data-value="sub.place">...</td>
+            <td data-value="sub.length">...</td>
+            <td data-value="sub.description">...</td>
+        </tbody>
+    </table>
+    <!--END CONTENT-->
+    <!-- gsap lib -->
+    <script src="js/libs/TweenMax.min.js"></script>
+    <script src="js/libs/TimelineMax.min.js"></script>
+    <script src="js/libs/utils/SplitText.min.js"></script>
+    <script src="js/libs/TweenMax.min.js"></script>
+    <script src="js/libs/ScrollMagic.min.js"></script>
+    <script src="js/libs/debug.addIndicators.min.js"></script>
+    <script src="js/libs/animation.gsap.min.js"></script>
+
+    <script src="js/utils.js"></script>
+    <script>
+        var mainData = {
+        name: "Nicolas Maitre",
+        infos:{
+            currentJob: "gamer pro"
+        },
+        skills: [
+            "php",
+            "ruby",
+            "javascript"
+        ],
+        jobs: [
+            {
+                title: "McDonald's",
+                place: "Lausanne",
+                length: "2 ans",
+                description: "J'ai fait des frites",
+            },
+            {
+                title: "Éboueur",
+                place: "Region de Nyon",
+                length: "3 semaines",
+                description: "J'ai ramassé les poubelles",
+            },
+        ],
+    }
+    </script>
+    <script src="js/builder.js"></script>
+    <script src="js/dynofolio.js"></script>
+    <script src="js/animations.js"></script>
+    <!--live reload-->
+    <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"><' + '/script>')</script> -->
+</body>
+
+</html>

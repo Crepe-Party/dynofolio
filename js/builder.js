@@ -75,7 +75,6 @@ var transformers = {
     prettyDate(dateStamp){
         var date = new Date(dateStamp);
         return `${date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}`;
-        // return `${date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long'})}`
     },
 }
 //returns shouldFillContent
