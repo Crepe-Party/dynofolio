@@ -113,3 +113,11 @@ __example__
         <td data-value="sub.description">J'ai ramassé les poubelles</td>
     </tr></tbody>
 </table>
+
+___
+
+# Future improvement
+- Split jobs and skill in categories
+- Links between jobs skills and skills
+- Links between skills proof and projects
+- Anchor for section
