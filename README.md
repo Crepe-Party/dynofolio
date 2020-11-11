@@ -2,6 +2,8 @@
 Easy to implement animated portfolio (for developpers).
 
 The project start with the idea to have a dynamic e-portfolio with some little cool and justified animations.
+
+This project has been developed in 4 mornings to 2 people.
 ____
 
 ## Functionality display the Curriculum vitæ
