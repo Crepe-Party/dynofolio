@@ -19,8 +19,7 @@ The style of skills card is inspired by the tutorial [on codepen](https://codepe
 All animation are from gsap library and plugin used are :
 - TweenMax
 - TimelineMax
-- utils/SplitText
-- TweenMax
+- SplitText
 - ScrollMagic
 - debug.addIndicators
 - animation.gsap
